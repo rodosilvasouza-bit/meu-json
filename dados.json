@@ -1,0 +1,35 @@
+{
+  "title": "🌈 Seu filho não te obedece... e você já está cansada de repetir tudo mil vezes?",
+  "ctaText": "QUERO MUDAR MINHA ROTINA HOJE",
+  "ctaLink": "https://pay.kiwify.com.br/KZVItj2",
+  "painPoints": [
+    "Você <span class=\"highlight\">grita</span> com seu filho/filha, mas depois se arrepende.",
+    "Você <span class=\"highlight\">repete tudo mil vezes</span> e, mesmo assim, eles não cumprem suas tarefas.",
+    "Você quer educar com <span class=\"highlight\">amor e paciência</span>, mas parece difícil.",
+    "Você ama profundamente seu filho/filha, mas não se sente como o pai ou mãe que gostaria de ser."
+  ],
+  "features": [
+    "Seu filho começa a colaborar sem você implorar ou gritar",
+    "Menos birras, menos estresse… e muito mais leveza no dia a dia",
+    "Você para de gritar e termina o dia sem culpa",
+    "Seu filho entende o que precisa fazer — e faz com mais autonomia"
+  ],
+  "testimonials": [
+    {
+      "image": "assets/images/depoimento-1.jpeg",
+      "caption": "Maria — São Paulo"
+    },
+    {
+      "image": "assets/images/depoimento-2.jpeg",
+      "caption": "Ana — Rio de Janeiro"
+    }
+  ],
+  "mockup": "assets/images/mockup.jpg",
+  "priceOld": "R$67,00",
+  "priceNow": "R$27,00",
+  "benefits": [
+    "Acesso imediato após o pagamento",
+    "Compre uma vez e use para sempre",
+    "Funciona em qualquer impressora"
+  ]
+}
