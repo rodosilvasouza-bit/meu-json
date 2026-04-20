@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Oferta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .btn {
+      display: block;
+      background: #28a745;
+      color: white;
+      padding: 15px;
+      margin: 20px 0;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .price-old {
+      text-decoration: line-through;
+      color: #888;
+    }
+    .price-now {
+      font-size: 28px;
+      color: #28a745;
+      font-weight: bold;
+    }
+    ul {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 id="title"></h1>
+
+  <a id="cta" class="btn" href="#" target="_blank"></a>
+
+  <h3>Você se identifica com isso?</h3>
+  <ul id="painPoints"></ul>
+
+  <h3>O que você vai conseguir:</h3>
+  <ul id="features"></ul>
+
+  <h3>Benefícios:</h3>
+  <ul id="benefits"></ul>
+
+  <p class="price-old" id="priceOld"></p>
+  <p class="price-now" id="priceNow"></p>
+</div>
+
+<script>
+fetch('dados.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('title').innerText = data.title;
+    
+    const cta = document.getElementById('cta');
+    cta.innerText = data.ctaText;
+    cta.href = data.ctaLink;
+
+    const painPoints = document.getElementById('painPoints');
+    data.painPoints.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = item;
+      painPoints.appendChild(li);
+    });
+
+    const features = document.getElementById('features');
+    data.features.forEach(item => {
+      const li = document.createElement('li');
+      li.innerText = item;
+      features.appendChild(li);
+    });
+
+    const benefits = document.getElementById('benefits');
+    data.benefits.forEach(item => {
+      const li = document.createElement('li');
+      li.innerText = item;
+      benefits.appendChild(li);
+    });
+
+    document.getElementById('priceOld').innerText = data.priceOld;
+    document.getElementById('priceNow').innerText = data.priceNow;
+  });
+</script>
+
+</body>
+</html>
