@@ -39,6 +39,11 @@ h1 {
   border-radius:8px;
   text-decoration:none;
   margin:20px 0;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
 }
 
 .section {
@@ -50,6 +55,11 @@ h1 {
   padding:15px;
   border-radius:10px;
   margin-bottom:10px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.02);
 }
 
 .price-box {
@@ -98,13 +108,12 @@ img {
 <h1 id="title"></h1>
 <p class="sub">Método simples para transformar a rotina do seu filho sem estresse</p>
 
-<img src="https://github.com/rodosilvasouza-bit/meu-json/blob/main/assests/images/mockup.jpeg" style="
+<img src="https://raw.githubusercontent.com/rodosilvasouza-bit/meu-json/main/assets/imagens/mockup.jpeg" style="
   width:100%; 
   border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  margin:20px 0
-  ">
-  <img id="mockup">
+  margin:20px 0;
+">
 
 <a id="ctaTop" class="btn" target="_blank"></a>
 
@@ -147,7 +156,6 @@ fetch('dados.json')
 .then(data => {
 
   document.getElementById('title').innerHTML = data.title;
-  document.getElementById('mockup').src = data.mockup;
 
   document.getElementById('ctaTop').innerText = data.ctaText;
   document.getElementById('ctaTop').href = data.ctaLink;
